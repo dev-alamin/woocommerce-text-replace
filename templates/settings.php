@@ -1,7 +1,7 @@
  <div class="wrap">
         <!-- Tab header  -->
    <?php include WTC_PLUGIN_PATH . 'templates/tabs/tab-header.php'; ?>
-    <div class="tab-content mt-5">
+    <div class="tab-content">
         <!-- General Settings Tab -->
     <?php include WTC_PLUGIN_PATH . 'templates/tabs/general.php'; ?>
         <!-- Product Page Settings Tab -->
@@ -22,8 +22,8 @@ jQuery(document).ready(function($) {
     // Switch tabs on click
     $('.nav-tab').on('click', function(e) {
         e.preventDefault();
-        $('.nav-tab').removeClass('nav-tab-active');
-        $(this).addClass('nav-tab-active');
+        $('.nav-tab').removeClass('nav-tab-active text-light bg-primary bg-gradient');
+        $(this).addClass('nav-tab-active text-light bg-primary bg-gradient');
         $('.tab-pane').removeClass('show active');
         $($(this).attr('href')).addClass('show active');
     });

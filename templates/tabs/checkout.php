@@ -21,6 +21,7 @@
         );
 
         // Loop through the input fields and create the form elements
+        echo '<div class="input-wrapper">';
         foreach ($input_fields as $option_name => $label) {
             $value = isset($checkout_page_settings[$option_name]) ? sanitize_text_field($checkout_page_settings[$option_name]) : '';
             ?>
@@ -29,6 +30,7 @@
                 <input type="text" class="form-control" id="<?php echo $option_name; ?>" name="wc_text_replace_settings[<?php echo $option_name; ?>]" value="<?php echo esc_attr($value); ?>" placeholder="<?php echo esc_attr($label); ?>">
             </div>
         <?php } ?>
+        </div>
         <!-- Add more input fields for Checkout Page Settings as needed -->
         <?php submit_button(__('Save Changes', 'wc-text-replace')); ?>
     </form>

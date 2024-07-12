@@ -1,0 +1,78 @@
+.input-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+    background: chocolate;
+    padding: 15px;
+    color: #fff;
+    width: 24%;
+}
+.form-group label {
+    display: inline-block;
+    margin-bottom: .5rem;
+    font-weight: bold;
+    font-size: 20px;
+    font-family: sans-serif;
+}
+.form-group input{
+    font-size: 22px;
+    border: none;
+}
+.tab-content .tab-pane h2{
+    font-family:sans-serif;
+    margin-bottom: 25px;
+}
+.form-group:nth-child(even) {
+    background: chocolate;
+}
+.form-group:nth-child(odd) {
+    background: lightseagreen;
+}
+
+.form-group:nth-child(3n) {
+    background: chocolate;
+}
+.form-group:nth-child(3n+1) {
+    background: coral;
+}
+.form-group:nth-child(3n+2) {
+    background: lightseagreen;
+}
+
+.tab-content .tab-pane.active {
+    background-color: rgba(212, 212, 255, 0.5);
+    padding: 15px;
+}
+.nav-tab-wrapper {
+    border-bottom: none !important;
+}
+.nav-tab-wrapper a {
+    font-size: 18px;
+    padding: 15px;
+}
+.nav-tab{
+    margin-left: 0;
+    background: rgba(212, 212, 255, 0.5);
+}
+.nav-tab.nav-tab-active{
+    background: #0062cc!important;
+    color: #fff;
+}
+.tab-content .tab-pane .button-primary {
+    background: #2271b1;
+    border-color: #2271b1;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: none;
+    padding: 10px 25px;
+    font-size: 25px;
+    text-transform: uppercase;
+    background: black;
+    border: none;
+}
+
+/* St@dfX>K2]F.MsL}3DV6rU */

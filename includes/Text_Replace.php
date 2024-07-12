@@ -4,6 +4,7 @@ use ADS\WTC\Admin;
 use ADS\WTC\Assets;
 use ADS\WTC\Forms\Product;
 use ADS\WTC\Forms\General;
+use ADS\WTC\Forms\ThankYou;
 
 class Text_Replace{
 
@@ -26,7 +27,7 @@ class Text_Replace{
     public static function get_instance(): Text_Replace {
         static $instance = null;
 
-        if(!$instance){
+        if( ! $instance ){
             $instance = new self();
         }
 
@@ -42,6 +43,7 @@ class Text_Replace{
         $this->define_constants();
         $product = new Product();
         $general = new General();
+        $thanku  = new ThankYou();
 
         // Initialize the Admin Notice class to display admin notices.
         new Assets();
@@ -52,10 +54,12 @@ class Text_Replace{
             new Admin();
             $product->submit_form();
             $general->submit_form();
+            $thanku->submit_form();
         } else {
             // Add frontend-related functionality here.
             $product->fire_hook();
             $general->fire_hook();
+            $thanku->fire_hook();
         }
     }
 
@@ -68,6 +72,7 @@ class Text_Replace{
         define( 'WTC_VERSION', self::$version );
         define( 'WTC_PLUGIN', plugin_dir_path( dirname( __FILE__ ) ) );
         define( 'WTC_PLUGIN_URL', plugin_dir_url( dirname( __FILE__ ) ) );
+        define( 'WTC_PLUGIN_ASSET', WTC_PLUGIN_URL . '/assets/'  );
         define( 'WTC_PLUGIN_PATH', plugin_dir_path( dirname( __FILE__ ) ) );
     }
 

@@ -6,7 +6,7 @@ use \ADS\WTC\Admin\Menu;
 
 class Admin{
     public function __construct(){
-        new Notice(); // Plugin Admin notice
+        // new Notice(); // Plugin Admin notice
         new Menu(); // Plugin Admin Menu 
         
     }
